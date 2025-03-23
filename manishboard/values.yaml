@@ -7,32 +7,14 @@ deployment:
     imageName: ghcr.io/manishboard/backend
     imageTag: v1.0.0
     containerPort: 8080
-  fluentd:
-    imageName: ghcr.io/manishboard/fluentd
-    imageTag: v1.0.0
-    env:
-      name: "FLUENTD_CONF"
-      value: "fluent.conf"
-
-volume:
-  logPath:
-    name: app-logs
-    mountPath: /app/logs
-  fluentdConfigPath:
-    name: fluentd-config
-    mountPath: /fluentd/etc
 
 resources:
   requests:
     cpu: "100m"
     memory: "128Mi"
   limits:
-    cpu: "500m"
-    memory: "512Mi"
-
-secrets:
-  github: ghcr-secret
-  ssl: manishboard-tls
+    cpu: "200m"
+    memory: "256Mi"
 
 service:
   name: manishboard-svc
@@ -45,9 +27,6 @@ ingress:
   name: manishboard-igrs
   className: traefik
   url: backend.manishboard.manish.kr
-
-configMap:
-  name: fluentd-config
 
 
 
