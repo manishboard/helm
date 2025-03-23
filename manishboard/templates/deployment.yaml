@@ -19,9 +19,6 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: {{.Values.deployment.backend.containerPort}}
-        volumeMounts:
-        - name: {{.Values.volume.logPath.name}}
-          mountPath: {{.Values.volume.logPath.mountPath}}
         resources:
           requests:
             cpu: {{.Values.resources.requests.cpu}}
@@ -29,28 +26,4 @@ spec:
           limits:
             cpu: {{.Values.resources.limits.cpu}}
             memory: {{.Values.resources.limits.memory}}
-      - name: fluentd
-        image: "{{.Values.deployment.fluentd.imageName}}:{{.Values.deployment.fluentd.imageTag}}"
-        env:
-        - name: {{ .Values.deployment.fluentd.env.name }}
-          value: {{ .Values.deployment.fluentd.env.value }}
-        volumeMounts:
-        - name: {{.Values.volume.logPath.name}}
-          mountPath: {{.Values.volume.logPath.mountPath}}
-        - name: {{.Values.volume.fluentdConfigPath.name}}
-          mountPath: {{.Values.volume.fluentdConfigPath.mountPath}}
-        resources:
-          requests:
-            cpu: {{.Values.resources.requests.cpu}}
-            memory: {{.Values.resources.requests.memory}}
-          limits:
-            cpu: {{.Values.resources.limits.cpu}}
-            memory: {{.Values.resources.limits.memory}}
-      volumes:
-      - name: {{.Values.volume.logPath.name}}
-        emptyDir: {}
-      - name: {{.Values.volume.fluentdConfigPath.name}}
-        configMap:
-          name: {{.Values.volume.fluentdConfigPath.name}}
-      imagePullSecrets:
-      - name: {{.Values.secrets.github}}
+
