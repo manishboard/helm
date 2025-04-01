@@ -4,9 +4,15 @@ metadata:
   name: {{.Values.ingress.name}}
   namespace: {{.Values.namespace}}
   annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-dns-cloudflare
+    traefik.ingress.kubernetes.io/router.entrypoints: websecure
     traefik.ingress.kubernetes.io/router.tls: "true"
 spec:
   ingressClassName: {{.Values.ingress.className}}
+  tls:
+    - hosts:
+        - {{.Values.ingress.url}}
+      secretName: manishboard-tls
   rules:
   - host: {{.Values.ingress.url}}
     http:

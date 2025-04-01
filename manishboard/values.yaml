@@ -2,10 +2,10 @@ namespace: manishboard-ns
 appName: backend
 deployment:
   name: manishboard-dep
-  replicas: 1
+  replicas: 2
   backend:
     imageName: ghcr.io/manishboard/backend
-    imageTag: v1.0.0
+    imageTag: latest
     containerPort: 8080
 
 resources:
@@ -18,7 +18,7 @@ resources:
 
 service:
   name: manishboard-svc
-  type: LoadBalancer
+  type: ClusterIP
   port: 80
   targetPort: 8080
   protocol: TCP
