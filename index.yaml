@@ -1,0 +1,15 @@
+apiVersion: v1
+entries:
+  manishboard:
+  - apiVersion: v2
+    appVersion: 1.0.2
+    created: "2025-04-01T08:40:37.720192454Z"
+    description: Helm chart for Manishboard App. Go to https://github.com/manishboard
+      for more info
+    digest: e5ffedfd9b9ae3fc682acd3dbd730e11a1fa7fdcc3e8e1ac99eaca3fcd984a3f
+    name: manishboard
+    type: application
+    urls:
+    - https://github.com/manishboard/helm/releases/download/manishboard-1.0.0/manishboard-1.0.0.tgz
+    version: 1.0.0
+generated: "2025-04-01T08:40:37.720197513Z"
