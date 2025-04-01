@@ -3,7 +3,8 @@ name: Release Charts
 on:
   push:
     branches:
-      - main
+      - main  # Triggers on push to the main branch
+  workflow_dispatch:  # Allows manually triggering the workflow
 
 jobs:
   release:
