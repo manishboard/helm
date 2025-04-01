@@ -13,6 +13,8 @@ spec:
       labels:
         app: {{.Values.appName}}
     spec:
+      imagePullSecrets:
+      - name: {{.Values.docker.creds}}
       containers:
       - name: {{.Values.appName}}
         image: "{{.Values.deployment.backend.imageName}}:{{.Values.deployment.backend.imageTag}}"

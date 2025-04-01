@@ -16,6 +16,9 @@ resources:
     cpu: "200m"
     memory: "256Mi"
 
+docker:
+  creds: ghcr-logins
+
 service:
   name: manishboard-svc
   type: ClusterIP
