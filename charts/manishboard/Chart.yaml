@@ -2,5 +2,5 @@ apiVersion: v2
 name: manishboard
 description: Helm chart for Manishboard App. Go to https://github.com/manishboard for more info
 type: application
-version: 1.0.2
+version: 1.0.3
 appVersion: 1.0.2

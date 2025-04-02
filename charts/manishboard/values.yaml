@@ -33,6 +33,5 @@ ingress:
 
 certificate:
   name: manishboard-tls-cert
-  secretName: manishboard-tls-secret
 
 

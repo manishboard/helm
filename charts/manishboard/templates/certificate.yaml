@@ -4,7 +4,7 @@ metadata:
   name: {{.Values.certificate.name}}
   namespace: {{.Values.namespace}}
 spec:
-  secretName: {{.Values.certificate.secretName}}
+  secretName: {{.Values.certificate.name}}
   issuerRef:
     name: letsencrypt-dns-cloudflare
     kind: ClusterIssuer
