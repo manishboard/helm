@@ -12,7 +12,7 @@ spec:
   tls:
     - hosts:
         - {{.Values.ingress.url}}
-      secretName: manishboard-tls
+      secretName: {{.Values.certificate.secretName}}
   rules:
   - host: {{.Values.ingress.url}}
     http:

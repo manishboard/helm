@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: {{.Values.certificate.name}}
+  namespace: {{.Values.namespace}}
+spec:
+  secretName: {{.Values.certificate.secretName}}
+  issuerRef:
+    name: letsencrypt-dns-cloudflare
+    kind: ClusterIssuer
+  dnsNames:
+    - {{.Values.ingress.url}}
+    - '*.manish.kr'

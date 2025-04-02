@@ -31,5 +31,8 @@ ingress:
   className: traefik
   url: backend.manishboard.manish.kr
 
+certificate:
+  name: manishboard-tls-cert
+  secretName: manishboard-tls-secret
 
 
