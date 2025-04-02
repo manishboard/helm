@@ -12,7 +12,7 @@ spec:
   tls:
     - hosts:
         - {{.Values.ingress.url}}
-      secretName: {{.Values.certificate.secretName}}
+      secretName: {{.Values.certificate.name}}
   rules:
   - host: {{.Values.ingress.url}}
     http:
