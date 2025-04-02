@@ -3,6 +3,17 @@ entries:
   manishboard:
   - apiVersion: v2
     appVersion: 1.0.2
+    created: "2025-04-02T11:41:13.235748556Z"
+    description: Helm chart for Manishboard App. Go to https://github.com/manishboard
+      for more info
+    digest: 2d0a766d1ff61c0fbcb99bc20c42234865e34a1d840640fffa634625dff8d1e1
+    name: manishboard
+    type: application
+    urls:
+    - https://github.com/manishboard/helm/releases/download/manishboard-1.0.2/manishboard-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: 1.0.2
     created: "2025-04-01T09:04:42.718304733Z"
     description: Helm chart for Manishboard App. Go to https://github.com/manishboard
       for more info
@@ -23,4 +34,4 @@ entries:
     urls:
     - https://github.com/manishboard/helm/releases/download/manishboard-1.0.0/manishboard-1.0.0.tgz
     version: 1.0.0
-generated: "2025-04-01T09:04:42.718316785Z"
+generated: "2025-04-02T11:41:13.235765237Z"
