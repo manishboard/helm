@@ -11,8 +11,8 @@ spec:
   ingressClassName: {{.Values.ingress.className}}
   tls:
     - hosts:
-        - {{.Values.ingress.url}}
-      secretName: {{.Values.certificate.name}}
+        - {{.Values.certificate.domain}}
+      secretName: manisboard-cert
   rules:
   - host: {{.Values.ingress.url}}
     http:

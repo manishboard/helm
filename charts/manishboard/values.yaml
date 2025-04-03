@@ -33,5 +33,6 @@ ingress:
 
 certificate:
   name: manishboard-tls-cert
+  domain: "*.manishboard.manish.kr"
 
 
