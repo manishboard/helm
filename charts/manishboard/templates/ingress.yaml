@@ -11,10 +11,10 @@ spec:
   ingressClassName: {{.Values.ingress.className}}
   tls:
     - hosts:
-        - {{.Values.certificate.domain}}
+        - "{{.Values.certificate.domain}}"
       secretName: manisboard-cert
   rules:
-  - host: {{.Values.ingress.url}}
+  - host: "{{.Values.ingress.url}}"
     http:
       paths:
       - path: /
